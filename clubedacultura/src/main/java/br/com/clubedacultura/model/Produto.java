@@ -26,21 +26,18 @@ public class Produto {
 	private String nome;
 	
 	@Column (name= "descricao_produto")
-	@NotNull
+	
 	private String descricao;
 	
-	@Column (name= "mes_produto")
-	@NotNull
-	private String mes;
-	
+		
 	@Column (name= "tema_produto")
 	@NotNull
 	private String tema;
 	
+	@Column (name="img_produto")
+	private String imagem;
 	
-	@ManyToOne
-	@JsonIgnoreProperties("produto")
-	private Categoria categoria;
+	
 
 	public long getId() {
 		return id;
@@ -66,14 +63,7 @@ public class Produto {
 		this.descricao = descricao;
 	}
 
-	public String getMes() {
-		return mes;
-	}
-
-	public void setMes(String mes) {
-		this.mes = mes;
-	}
-
+	
 	public String getTema() {
 		return tema;
 	}
@@ -82,14 +72,7 @@ public class Produto {
 		this.tema = tema;
 	}
 
-	public Categoria getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
-	}
-	
+		
 
 	
 	

@@ -3,10 +3,8 @@ package br.com.clubedacultura.model;
 
 public class UserLogin {
 	
-	private String nome; 
-	
-	//private String tipo; 
-	
+	private String nome; 	
+		
 	private String email; 
 	
 	private String senha; 

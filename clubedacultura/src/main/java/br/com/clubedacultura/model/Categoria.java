@@ -29,16 +29,16 @@ public class Categoria {
 	private String tipo;
 	
 	@Column (name = "quant_itens")
-	@NotNull 
+	 
 	private int quantidade; 
 	
 	@Column (name = "valor_categoria")
-	@NotNull
+	
 	private double valor;
 	
-	@OneToMany(mappedBy ="categoria" , cascade=CascadeType.PERSIST)
-	@JsonIgnoreProperties("categoria")
-	private List< Produto> produto;
+	@Column (name="img_categoria")
+	private String imagem;
+		
 
 	public long getId() {
 		return id;
@@ -72,13 +72,7 @@ public class Categoria {
 		this.valor = valor;
 	}
 
-	public List<Produto> getProduto() {
-		return produto;
-	}
 
-	public void setProduto(List<Produto> produto) {
-		this.produto = produto;
-	}
 
 	
 	
