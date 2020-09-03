@@ -14,6 +14,8 @@ public class UserDetailsImpl implements UserDetails {
 	
 	private String password; 
 	
+	private String tipo;
+	
 	private List<GrantedAuthority> authorities;
 	
 	private static final long serialVersionUID = 1L;
@@ -21,6 +23,7 @@ public class UserDetailsImpl implements UserDetails {
 	public UserDetailsImpl (Usuario user) {
 		this.userName = user.getEmail();
 		this.password = user.getSenha();
+		this.tipo = user.getTipo();
 	}
 	
 	public UserDetailsImpl () {}
@@ -41,6 +44,12 @@ public class UserDetailsImpl implements UserDetails {
 	public String getUsername() {
 		// TODO Auto-generated method stub
 		return userName;
+	}
+	
+
+	public String getTipo() {
+		// TODO Auto-generated method stub
+		return tipo;
 	}
 
 	@Override
