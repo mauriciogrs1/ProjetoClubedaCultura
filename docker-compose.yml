@@ -35,6 +35,18 @@ services:
       - db
     networks:
       - generation-network
+      
+  frontCdC:
+    image: nginx
+    volumes:
+      - ./frontCdC/dist/frontCdC:/usr/share/nginx/html/
+    ports:
+      - "4200:80"      
+    networks:
+      - generation-network
+
 networks:
     generation-network:
         driver: bridge
+        
+        
